@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Campus Pulse</title>
+  <meta name="theme-color" content="#0F1216">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="login" class="login hidden">
+    <img src="assets/icon-192.png" alt="" class="login-logo">
+    <h1>Campus Pulse</h1>
+    <p class="accent">Everything happening on campus.<br>Except your motivation. That's on you.</p>
+    <button id="loginBtn" class="btn big">Continue with Google</button>
+    <p id="loginErr" class="err"></p>
+  </section>
+
+  <section id="setup" class="login hidden">
+    <h1>Almost there!</h1>
+    <p class="accent">Open <b>config.js</b> and paste your Firebase web settings (apiKey and appId), then redeploy.</p>
+  </section>
+
+  <div id="app" class="hidden">
+    <header class="top">
+      <img src="assets/favicon.png" alt="" class="top-logo"><b>Campus Pulse</b>
+      <span class="grow"></span><span id="who" class="muted small"></span>
+      <button id="logout" class="link">Logout</button>
+    </header>
+    <nav id="nav">
+      <button data-tab="campus"><i>📅</i><span>Campus</span></button>
+      <button data-tab="exams"><i>📝</i><span>Exams</span></button>
+      <button data-tab="faculty"><i>⭐</i><span>Faculty</span></button>
+      <button data-tab="chat"><i>💬</i><span>Chat</span></button>
+      <button data-tab="type"><i>⌨️</i><span>Type</span></button>
+      <button data-tab="about"><i>😎</i><span>About</span></button>
+    </nav>
+    <main id="view"></main>
+  </div>
+
+  <div id="modal" class="modal hidden"></div>
+  <div id="toast" class="toast hidden"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
